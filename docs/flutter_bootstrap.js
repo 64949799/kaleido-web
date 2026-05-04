@@ -40,6 +40,6 @@ _flutter.loader.load({
   config: {
     renderer: "canvaskit",
     canvasKitBaseUrl: "canvaskit/",
-    fontFallbackBaseUrl: "assets/fonts/",
+    fontFallbackBaseUrl: "https://gstatic.loli.net/s/",
   },
 });
