@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="512" height="512">
+    <defs>
+        <!-- 苹果风格极简白色背景渐变 -->
+        <radialGradient id="bgGrad" cx="50%" cy="50%" r="75%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="60%" stop-color="#F9F9FB"/>
+            <stop offset="100%" stop-color="#F2F2F5"/>
+        </radialGradient>
+
+        <!-- 玻璃质感高光微渐变（营造苹果iOS毛玻璃质感） -->
+        <radialGradient id="glassHighlight" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+            <stop offset="40%" stop-color="#ffffff" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.08"/>
+        </radialGradient>
+    </defs>
+
+    <!-- 1. 图标基础底板（iOS 圆角矩形） -->
+    <rect width="1024" height="1024" rx="225" fill="url(#bgGrad)"/>
+
+    <!-- 2. 背景氛围柔光（极淡） -->
+    <circle cx="512" cy="512" r="380" fill="#D6447A" opacity="0.04" />
+
+    <!-- 3. 万花筒图案：12个圆角三角形（整体逆时针旋转30度） -->
+    <g id="kaleidoscope" transform="rotate(-30 512 512)" stroke="#F9F9FB" stroke-width="11" stroke-linejoin="round">
+        
+        <!-- ===== 1. Q0 → P0 + P5 ===== -->
+        <polygon points="932,512 719.8,632 719.8,392" fill="#F4A4B8" />
+        
+        <!-- ===== 2. P0 → Q0 + Q1 ===== -->
+        <polygon points="719.8,632 932,512 722,875.7" fill="#F4B8C4" />
+        
+        <!-- ===== 3. Q1 → P1 + P0 ===== -->
+        <polygon points="722,875.7 512,752 719.8,632" fill="#F4C8D4" />
+        
+        <!-- ===== 4. P1 → Q1 + Q2 ===== -->
+        <polygon points="512,752 722,875.7 302,875.7" fill="#FAD4C8" />
+        
+        <!-- ===== 5. Q2 → P2 + P1 ===== -->
+        <polygon points="302,875.7 304.2,632 512,752" fill="#FBE0D0" />
+        
+        <!-- ===== 6. P2 → Q2 + Q3 ===== -->
+        <polygon points="304.2,632 302,875.7 92,512" fill="#FDF0E2" />
+        
+        <!-- ===== 7. Q3 → P3 + P2 ===== -->
+        <polygon points="92,512 304.2,392 304.2,632" fill="#F2EFE9" />
+        
+        <!-- ===== 8. P3 → Q3 + Q4 ===== -->
+        <polygon points="304.2,392 92,512 302,148.3" fill="#E2E8F0" />
+        
+        <!-- ===== 9. Q4 → P4 + P3 ===== -->
+        <polygon points="302,148.3 512,272 304.2,392" fill="#D0E8F0" />
+        
+        <!-- ===== 10. P4 → Q4 + Q5 ===== -->
+        <polygon points="512,272 302,148.3 722,148.3" fill="#C4D8F0" />
+        
+        <!-- ===== 11. Q5 → P5 + P4 ===== -->
+        <polygon points="722,148.3 719.8,392 512,272" fill="#D0C8F0" />
+        
+        <!-- ===== 12. P5 → Q5 + Q0 ===== -->
+        <polygon points="719.8,392 722,148.3 932,512" fill="#E0C8F0" />
+        
+    </g>
+
+    <!-- 4. 苹果风格毛玻璃环境高光覆盖 -->
+    <circle cx="512" cy="512" r="480" fill="url(#glassHighlight)"/>
+</svg>
